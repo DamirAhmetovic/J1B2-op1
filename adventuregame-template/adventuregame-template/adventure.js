@@ -5,6 +5,7 @@ var button3 = document.getElementById('button3');
 var description = document.getElementById('description');
 var inventoryItem = document.getElementById ("inventoryItem");
 var inventory = {'key':false};
+var title = document.getElementById('title');
 
 button1.innerHTML = 'start';
 button1.onclick = start;
@@ -14,6 +15,7 @@ inventoryItem.style.display = 'none';
 
 
 function start(){
+	title.innerHTML = 'outlast';
 	description.innerHTML = 'je ben een journalist je gaat onderzoek doen bij het psychiatrisch ziekenhuis genaamd Mount Massive Asylum maar als je naar binnen gaat kom je erachter dat je dockter hele erge experimenten heeft uitgevoert maar dat is uit de hand gelopen. je zit vast in het psychiatrisch ziekenhuis met als die gekken en moet zien te ontsnappen.'
 	button1.innerHTML = 'start';
    	button1.onclick = level1 ;
