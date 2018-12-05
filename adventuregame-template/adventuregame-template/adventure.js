@@ -32,12 +32,12 @@ function start(){
 function level1(){
 	container.className = 'container-level1';
 	description.innerHTML = 'je bent gepakt door de doktor hij had je buiten westen geslagen. je word wakker in een kamer de docter is er niet wat doe je.';
-	button1.onclick = dood;
-	button2.onclick = dood;
+	button1.onclick = dood2;
+	button2.onclick = dood2;
 	button3.onclick = level2;
 	button2.style.display = 'inline';
 	button3.style.display = 'inline';
-	button1.innerHTML = 'vecht';
+	button1.innerHTML = 'afleiden';
 	button2.innerHTML = 'ren';
 	button3.innerHTML = 'verstoppen';
 	inventoryItem.style.display = 'none';
@@ -119,7 +119,7 @@ function level5(){
 		button2.onclick = level7;
 	}
 	else{
-		alert('je hebt een sleutel nodig')
+		button2.onclick = sleutelnodig;
 	}
  }
 
@@ -142,8 +142,8 @@ function level5(){
 	button2.innerHTML = 'verstop';
 	button3.innerHTML = 'afleiden';
 	description.innerHTML = 'iemand staat je buiten op te wachten, wat doe je';	
-	button1.onclick = dood;
-	button2.onclick = dood;
+	button1.onclick = dood3;
+	button2.onclick = dood3;
 	button3.onclick = level9;
  }
 
@@ -179,6 +179,30 @@ function dood(){
 	resetInventory();
 }
 
+function dood2(){
+	container.className = 'container-dood2';
+	description.innerHTML = 'de dokter heeft je te pakken, je bent dood';
+	button2.style.display = 'none';
+	button3.style.display = 'none';
+	button1.innerHTML = 'restart';
+	button1.onclick = start;
+	inventoryItem.style.display = 'none';
+	button1.style.visibility = 'visible';
+	resetInventory();
+}
+
+function dood3(){
+	container.className = 'container-dood3';
+	description.innerHTML = 'chris heeft je te pakken, je bent dood';
+	button2.style.display = 'none';
+	button3.style.display = 'none';
+	button1.innerHTML = 'restart';
+	button1.onclick = start;
+	inventoryItem.style.display = 'none';
+	button1.style.visibility = 'visible';
+	resetInventory();
+}
+
 function resetInventory(){
 	inventory['key']=false;
 }
@@ -189,4 +213,7 @@ function pickUpKey(){
     if(inventory['key'] != null) {
         description.innerHTML = 'Je hebt de sleutel gevonden';
     }
+}
+function sleutelnodig() {
+	alert('je hebt een sleutel nodig');
 }

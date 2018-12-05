@@ -67,6 +67,14 @@ body{
 	background-image: url("images/dood.png");	
 }
 
+.container-dood2{
+	background-image: url("images/dood2.png");	
+}
+
+.container-dood3{
+	background-image: url("images/dood3.png");	
+}
+
 #inventoryItem{
 	
 }
